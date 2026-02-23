@@ -77,7 +77,7 @@
 
     nixosConfigurations = {
       miyoku157 = self.lib.mkHost {
-        hostname = "nixos";   # MUST match `hostname`
+        hostname = "miyoku157";   # MUST match `hostname`
         system   = "x86_64-linux";
         username = "miyoku157";
       };
