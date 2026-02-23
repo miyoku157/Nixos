@@ -23,7 +23,7 @@
 
   environment.systemPackages = with pkgs; [
     waybar
-    rofi-wayland
+    rofi
     dunst
     kitty
     wl-clipboard
