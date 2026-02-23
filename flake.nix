@@ -13,7 +13,7 @@
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, hyprland, ... }:
   let
     systems = [ "x86_64-linux" "aarch64-linux" ];
 
