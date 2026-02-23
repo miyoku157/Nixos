@@ -78,7 +78,7 @@
       # Host configurations - define your machines here
       nixosConfigurations = {
         miyoku157 =
-          self.lib.mkHost {
+          self.lib.mkHost inputs {
             hostname = "miyoku157";
             system = "x86_64-linux";
             username = "miyoku157";
