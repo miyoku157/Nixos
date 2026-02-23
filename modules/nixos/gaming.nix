@@ -25,17 +25,21 @@
 
   # ===== AMD GPU Configuration =====
   services.xserver.videoDrivers = [ "amdgpu" ];
-  
-  # ===== OpenGL/Vulkan Support =====
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    package32 = true;  # Essential for 32-bit games    
+    enable32Bit = true;
     # AMD-specific packages
     extraPackages = with pkgs; [
+      amdvlk           # AMD Vulkan driver
       rocmPackages.clr-icd  # ROCm OpenCL
       rocmPackages.clr-runtime
     ];
-  };
+    
+    # 32-bit AMD support
+    extraPackages32 = with pkgs; [
+      driversi686Linux.amdvlk
+    ];
+  }
 
   # ===== GameMode Configuration =====
   programs.gamemode = {
