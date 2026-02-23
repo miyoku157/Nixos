@@ -21,16 +21,13 @@
 # from the error message.
 # =============================================================================
 
-{ stdenv, fetchgit }:
+{ stdenv, dotfiles-src }:
 
 stdenv.mkDerivation {
   pname = "rivendell-hyprdots";
   version = "1.0.0";
 
-  src = fetchgit {
-    url = "https://codeberg.org/miyoku157/rivendell-hyprdots.git";
-    ref = "master";
-  };
+  src = dotfiles-src;
 
   installPhase = ''
     mkdir -p $out

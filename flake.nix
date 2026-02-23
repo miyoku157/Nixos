@@ -11,6 +11,11 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
 
+    hyprdots = {
+      url = "git+https://codeberg.org/miyoku157/rivendell-hyprdots.git";
+      flake = false;
+    };
+
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, hyprland, ... }:
@@ -23,7 +28,10 @@
         (system:
           f (import nixpkgs {
             inherit system;
-            overlays = [ self.overlays.default ];
+            overlays = [
+              (final: prev: { hyprdots-input = inputs.hyprdots; })
+              self.overlays.default
+            ];
             config.allowUnfree = true;
           })
         );

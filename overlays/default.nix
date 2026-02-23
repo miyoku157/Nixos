@@ -14,5 +14,7 @@
 # =============================================================================
 
 self: super: {
-  hyprdots = self.callPackage ../packages/hyprdots.nix { };
+  hyprdots = self.callPackage ../packages/hyprdots.nix {
+    dotfiles-src = super.hyprdots-input or null;
+  };
 }
