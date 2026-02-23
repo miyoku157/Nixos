@@ -39,7 +39,7 @@
     extraPackages32 = with pkgs; [
       driversi686Linux.amdvlk
     ];
-  }
+  };
 
   # ===== GameMode Configuration =====
   programs.gamemode = {
