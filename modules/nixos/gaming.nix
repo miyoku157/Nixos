@@ -29,18 +29,11 @@
   # ===== OpenGL/Vulkan Support =====
   hardware.opengl = {
     enable = true;
-    driSupport32Bit = true;  # Essential for 32-bit games
-    
+    enable32Bit = true;  # Essential for 32-bit games    
     # AMD-specific packages
     extraPackages = with pkgs; [
-      amdvlk           # AMD Vulkan driver
       rocmPackages.clr-icd  # ROCm OpenCL
       rocmPackages.clr-runtime
-    ];
-    
-    # 32-bit AMD support
-    extraPackages32 = with pkgs; [
-      driversi686Linux.amdvlk
     ];
   };
 
