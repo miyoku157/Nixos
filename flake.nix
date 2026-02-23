@@ -79,7 +79,7 @@
       nixosConfigurations = {
         miyoku157 =
           self.lib.mkHost {
-            hostname = "miyoku157";
+            hostname = "nixos";
             system = "x86_64-linux";
             username = "miyoku157";
           };
