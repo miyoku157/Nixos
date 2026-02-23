@@ -28,11 +28,6 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-    # AMD-specific packages
-    extraPackages = with pkgs; [
-      rocmPackages.clr-icd  # ROCm OpenCL
-      rocmPackages.clr-runtime
-    ];
   };
 
   # ===== GameMode Configuration =====
