@@ -51,6 +51,7 @@ nixpkgs.lib.nixosSystem {
       # Pass specialArgs to home-manager modules
       home-manager.extraSpecialArgs = {
         inherit inputs username hostname;
+        hyprdots = inputs.hyprdots;
       };
 
       home-manager.users.${username} = {

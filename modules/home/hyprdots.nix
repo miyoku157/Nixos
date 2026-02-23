@@ -15,10 +15,10 @@
 # Dotfiles are managed as a Nix package, ensuring reproducibility.
 # =============================================================================
 
-{ pkgs, ... }:
+{ pkgs, hyprdots, ... }:
 
 let
-  dotfiles = pkgs.hyprdots;
+  dotfiles = hyprdots;
 in
 {
   xdg.configFile."hypr".source = "${dotfiles}/hypr";
