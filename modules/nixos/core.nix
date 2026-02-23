@@ -19,6 +19,9 @@
   # Enable experimental features for flakes and nix-command
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Allow unfree packages (needed for proprietary software)
+  nixpkgs.config.allowUnfree = true;
+
   # French locale and timezone
   time.timeZone = "Europe/Paris";
 

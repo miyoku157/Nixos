@@ -32,7 +32,6 @@
               (final: prev: { hyprdots-input = inputs.hyprdots; })
               self.overlays.default
             ];
-            config.allowUnfree = true;
           })
         );
   in
