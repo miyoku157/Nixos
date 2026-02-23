@@ -16,6 +16,9 @@
 {
   networking.hostName = hostname;
 
+  # Enable experimental features for flakes and nix-command
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # French locale and timezone
   time.timeZone = "Europe/Paris";
 

@@ -1,6 +1,6 @@
 {
   description = "Rivendell - Modular Hyprland NixOS Flake";
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
