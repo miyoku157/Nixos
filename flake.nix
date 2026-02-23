@@ -11,16 +11,15 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
 
-    flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, flake-utils, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
   let
     systems = [ "x86_64-linux" "aarch64-linux" ];
 
     # Helper for per-system pkgs
     forAllSystems = f:
-      flake-utils.lib.genAttrs systems
+      nixpkgs.lib.genAttrs systems
         (system:
           f (import nixpkgs {
             inherit system;
