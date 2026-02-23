@@ -29,7 +29,6 @@
   # ===== OpenGL/Vulkan Support =====
   hardware.opengl = {
     enable = true;
-    driSupport = true;
     driSupport32Bit = true;  # Essential for 32-bit games
     
     # AMD-specific packages
