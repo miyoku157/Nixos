@@ -29,7 +29,7 @@
   # ===== OpenGL/Vulkan Support =====
   hardware.opengl = {
     enable = true;
-    enable32Bit = true;  # Essential for 32-bit games    
+    package32Bit = true;  # Essential for 32-bit games    
     # AMD-specific packages
     extraPackages = with pkgs; [
       rocmPackages.clr-icd  # ROCm OpenCL
