@@ -73,12 +73,12 @@
         hyprdots = import ./modules/home/hyprdots.nix;
       };
 
-      lib.mkHost = import ./lib/mkHost.nix;
+      lib.mkHost = import ./lib/mkHost.nix (inputs // { inherit self; });
 
       # Host configurations - define your machines here
       nixosConfigurations = {
         miyoku157 =
-          self.lib.mkHost inputs {
+          self.lib.mkHost {
             hostname = "miyoku157";
             system = "x86_64-linux";
             username = "miyoku157";
