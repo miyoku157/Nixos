@@ -33,7 +33,9 @@
     variant = "";
   };
 
-  services.networkmanager.enable = true;
+  # NetworkManager configuration
+  networking.networkmanager.enable = true;
+  networking.useDHCP = true;
 
   environment.systemPackages = with pkgs; [
     git
