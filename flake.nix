@@ -77,9 +77,9 @@
 
       # Host configurations - define your machines here
       nixosConfigurations = {
-        rivendell =
+        miyoku157 =
           self.lib.mkHost {
-            hostname = "rivendell";
+            hostname = "miyoku157";
             system = "x86_64-linux";
             username = "miyoku157";
           };
